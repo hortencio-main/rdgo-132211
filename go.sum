@@ -1,0 +1,10 @@
+github.com/gbin/goncurses v0.0.0-20240517145248-be6a464272ae h1:WeLSOuEYiwcuwg39YirhW0DibOkTztefXCTau5sSbyc=
+github.com/gbin/goncurses v0.0.0-20240517145248-be6a464272ae/go.mod h1:dmRjyC3ZOQQ4EXWMOIAQi0TLaJPcg61LFsJ9mvhSGRE=
+github.com/go-gl/gl v0.0.0-20231021071112-07e5d0ea2e71 h1:5BVwOaUSBTlVZowGO6VZGw2H/zl9nrd3eCZfYV+NfQA=
+github.com/go-gl/gl v0.0.0-20231021071112-07e5d0ea2e71/go.mod h1:9YTyiznxEY1fVinfM7RvRcjRHbw2xLBJ3AAGIT0I4Nw=
+github.com/go-gl/glfw/v3.3/glfw v0.0.0-20250301202403-da16c1255728 h1:RkGhqHxEVAvPM0/R+8g7XRwQnHatO0KAuVcwHo8q9W8=
+github.com/go-gl/glfw/v3.3/glfw v0.0.0-20250301202403-da16c1255728/go.mod h1:SyRD8YfuKk+ZXlDqYiqe1qMSqjNgtHzBTG810KUagMc=
+golang.org/x/sys v0.0.0-20210317225723-c4fcb01b228e h1:XNp2Flc/1eWQGk5BLzqTAN7fQIwIbfyVTuVxXxZh73M=
+golang.org/x/sys v0.0.0-20210317225723-c4fcb01b228e/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+seehuhn.de/go/ncurses v0.2.0 h1:ZV256n0GIMVEHJnECliGMffzdFsEoT7krJqdfGoYD1E=
+seehuhn.de/go/ncurses v0.2.0/go.mod h1:oAc9Y+UN0tflNV0iME++z0ij9uNmIjdxQFkpGoRMd2E=
