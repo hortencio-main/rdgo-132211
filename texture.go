@@ -4,27 +4,29 @@ import (
     "image"
     "image/draw"
     "image/png"
-    "os"
+    //~ "os"
     "log"
     "github.com/go-gl/gl/v2.1/gl"
+    "bytes"
+    
+    _ "embed"
 )
 
-// go allocates memory for these strings even when they are not written
-// todo change for a non-escaping way of printing
-func LoadTexture(filename string) uint32 {
-    file, err := os.Open(filename)
+//go:embed atlas.png
+var atlasData []byte
+
+//~ func LoadTexture(filename string) uint32 {
+    //~ file, err := os.Open(filename)
+    
+func LoadTexture() uint32 {
+    //~ file := atlas
+    
+    img, err := png.Decode(bytes.NewReader(atlasData))
     if err != nil {
-        log.Println("INFO: Failed to open texture file:", filename)
+        log.Println("INFO: Failed to decode embedded texture: atlas.png")
         return 0
     }
-    defer file.Close()
-
-    img, err := png.Decode(file)
-    if err != nil {
-        log.Println("INFO: Failed to decode texture:", filename)
-        return 0
-    }
-
+    
     rgba := image.NewRGBA(img.Bounds())
     draw.Draw(rgba, rgba.Bounds(), img, image.Point{0, 0}, draw.Src)
 
@@ -50,7 +52,7 @@ func LoadTexture(filename string) uint32 {
     gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST)
     gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST)
 
-    log.Println("INFO: Texture loaded successfully", filename, texture)
+    log.Println("INFO: atlas Texture loaded successfully")
     
     return texture
 }

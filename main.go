@@ -1,5 +1,6 @@
 //~ a recreation of rd-132211 written in go
 //~ go build -o rd *.go
+//~ GOOS=windows GOARCH=386 CGO_ENABLED=1 CXX=i686-w64-mingw32-g++ CC=i686-w64-mingw32-gcc go build -o rd.exe *.go
 
 package main
 
@@ -18,7 +19,13 @@ import (
 
     "github.com/go-gl/gl/v2.1/gl"
     "github.com/go-gl/glfw/v3.3/glfw"
+    
 )
+
+
+
+
+
 
 const SUBCHUNK_H = 16
 
@@ -140,7 +147,7 @@ func main() {
         log.Fatalln("failed to initialize OpenGL:", err)
     }
     
-    Atlas = LoadTexture("atlas.png")
+    Atlas = LoadTexture()
 
     window.SetInputMode(glfw.CursorMode, glfw.CursorDisabled)
     window.SetCursorPosCallback(mouseCursorCallback)
